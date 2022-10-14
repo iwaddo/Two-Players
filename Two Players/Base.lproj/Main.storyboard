@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-LQ-3Xj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otz-LQ-3Xj">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1h2-H9-iSr"/>
@@ -25,7 +25,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13c-az-ys8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13c-az-ys8">
                                 <rect key="frame" x="225" y="0.0" width="150" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SJ6-wg-lFc"/>
@@ -34,11 +34,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-hs-Xso">
-                                <rect key="frame" x="63.180481283421727" y="64.5" width="248.5" height="26.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-hs-Xso">
+                                <rect key="frame" x="63.5" y="64.5" width="248.5" height="26.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYW-0p-I9W">
-                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="6" width="36.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,21 +50,44 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="kGa-xW-mHQ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-ku-oAE">
+                                <rect key="frame" x="136" y="140" width="103" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFc-ck-q8u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DBN-hs-Xso" firstAttribute="top" secondItem="Otz-LQ-3Xj" secondAttribute="bottom" constant="50" id="AGX-W3-WjE"/>
+                            <constraint firstItem="DBN-hs-Xso" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64.5" id="0kd-Mn-QtO"/>
+                            <constraint firstItem="ECu-ku-oAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Els-gN-LAm"/>
                             <constraint firstItem="13c-az-ys8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PT2-wx-8an"/>
+                            <constraint firstItem="Otz-LQ-3Xj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R7y-KW-VOY"/>
                             <constraint firstItem="Otz-LQ-3Xj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eGF-wl-4Ab"/>
                             <constraint firstItem="Otz-LQ-3Xj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hu6-qz-dle"/>
                             <constraint firstItem="13c-az-ys8" firstAttribute="leading" secondItem="Otz-LQ-3Xj" secondAttribute="trailing" constant="75" id="l3K-FR-qeG"/>
+                            <constraint firstItem="ECu-ku-oAE" firstAttribute="top" secondItem="DBN-hs-Xso" secondAttribute="bottom" constant="49" id="lSB-eS-LOJ"/>
                             <constraint firstAttribute="trailing" secondItem="13c-az-ys8" secondAttribute="trailing" id="ncB-O0-udX"/>
+                            <constraint firstItem="DBN-hs-Xso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pno-cM-2It"/>
+                            <constraint firstItem="Otz-LQ-3Xj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ve8-Jb-efG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputNameLabel" destination="OYW-0p-I9W" id="Bi3-TH-BWN"/>
+                        <outlet property="inputNameTextField" destination="8la-SJ-Hlz" id="P9O-5C-mev"/>
+                        <outlet property="playAgainButton" destination="ECu-ku-oAE" id="XeK-nc-Bj0"/>
+                        <outlet property="playerOneLabel" destination="Otz-LQ-3Xj" id="ih7-hn-hb8"/>
+                        <outlet property="playerTwoLabel" destination="13c-az-ys8" id="bag-GC-Qr9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
